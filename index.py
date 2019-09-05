@@ -1,5 +1,9 @@
 # Hangman Game
 import random 
+import os
+
+clear = lambda : os.system('clear')
+
 
 
 def play_hangman():
@@ -24,6 +28,7 @@ def play_hangman():
             attempts -= 1
             print('Letter not in word. {} attempts left.'.format(attempts))
             if attempts == 0:
+                clear()
                 print("You have no attempts left. Please start again")
                 play_hangman()
 
